@@ -40,6 +40,8 @@ GEM
       tzinfo (~> 1.1)
     aescrypt (1.0.0)
     arel (7.1.4)
+    autoprefixer-rails (6.5.3.1)
+      execjs
     aws-sdk-v1 (1.66.0)
       json (~> 1.4)
       nokogiri (>= 1.4.4)
@@ -47,6 +49,9 @@ GEM
     bcrypt (3.1.11-x86-mingw32)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.3.6)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     builder (3.2.2)
     byebug (9.0.6)
     coffee-rails (4.1.1)
@@ -172,6 +177,7 @@ DEPENDENCIES
   aescrypt
   aws-sdk-v1 (~> 1.66)
   bcrypt
+  bootstrap-sass (~> 3.3, >= 3.3.6)
   byebug
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
