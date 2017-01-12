@@ -13,8 +13,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #
 
 
+
 # gems from railsauth
-gem 'pg'
+
 gem "bcrypt"
 gem 'aws-sdk-v1', '~> 1.66'
 gem "aescrypt"
@@ -28,14 +29,19 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+group :production do
+  gem 'pg'
+end
+
 
 group :development do
-  gem 'web-console', '~> 2.0'
+  gem 'web-console', '>= 3.3.0'
 end
 
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+gem 'puma', '~> 3.0'
 
 # gems removed before not in railsauth
 #
