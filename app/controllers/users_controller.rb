@@ -12,9 +12,6 @@ class UsersController < ApplicationController
     end
 
     def create
-        params[:user] = Hash.new
-        params[:user][:first_name] = params[:full_name].split(" ").first
-        params[:user][:last_name] = params[:full_name].split(" ").last
         @user = User.new(user_params)
         if @user.save
             flash[:success] = "The user was added!"
@@ -26,7 +23,7 @@ class UsersController < ApplicationController
 
     private
     def user_params
-        params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)
+        params.require(:user).permit(:first_name, :email, :password, :password_confirmation)
     end
 
 end
